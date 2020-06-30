@@ -17,8 +17,14 @@ class HelloWorldCdkStack(core.Stack):
             timeout = core.Duration.seconds(3),
             memory_size = 128,
             retry_attempts = 0,
-            tracing = aws_lambda.Tracing.ACTIVE
+            tracing = aws_lambda.Tracing.ACTIVE,
+            reserved_concurrent_executions = 10
         )
 
         # create an api gateway
-        apigw = aws_apigateway.LambdaRestApi(self, 'RestApi', handler=lambdafunc)
+        apigw = aws_apigateway.LambdaRestApi(self, 'RestApi', 
+            handler = lambdafunc,
+            deploy_options = {
+                "tracing_enabled": True
+            }
+        )
