@@ -1,0 +1,11 @@
+# Brand new GitHub test token - never pushed before
+# Using GitHub's official test pattern
+
+GITHUB_TEST_SECRET=secret_scanning_ab85fc6f8d7638cf1c11da812da308d43_abcde
+
+# Fresh Slack webhook pattern - different from all previous
+SLACK_WEBHOOK_NEW=https://hooks.slack.com/services/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ba12
+
+# New Stripe key - different pattern
+STRIPE_KEY_NEW=sk_live_51Z9Y8X7W6V5U4T3S2R1Q0P9O8N7M6L5K4J3I2H1G0F9E8D7C6B5A4
+
